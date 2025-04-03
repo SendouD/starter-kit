@@ -1,0 +1,27 @@
+{
+  "name": "web3-starter-kit",
+  "version": "1.0.0",
+  "description": "Interactive CLI to create Web3 projects with selectable frontend and smart contract frameworks",
+  "main": "index.js",
+  "bin": {
+    "create-web3-app": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web3",
+    "starter",
+    "ethereum",
+    "dapp",
+    "next.js",
+    "vite",
+    "foundry",
+    "hardhat"
+  ],
+  "author": "sendou",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
