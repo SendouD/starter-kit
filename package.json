@@ -1,6 +1,6 @@
 {
   "name": "create-starter-kit-sendou",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Web3 starter kit for smart contracts & frontend",
   "bin": {
     "starter-kit": "./bin/starter.js"

@@ -1,0 +1,7 @@
+{
+  "name": "@kit/foundry",
+  "version": "0.0.1",
+  "scripts": {
+    "chain": "make chain"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "my-eth-project",
+  "private": true,
+ "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "chain": "yarn workspace @kit/foundry chain",
+    "codegen": "cd packages/foundry && forge build && cd ../web && npx wagmi generate"
+
+  }
+}

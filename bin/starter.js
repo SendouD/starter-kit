@@ -5,21 +5,24 @@ import fs from 'fs-extra';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// Resolve `__dirname` in ES modules
+// Resolve __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-// Get project name from command-line arguments
-const args = process.argv.slice(2);
-const projectName = args[0] || 'my-web3-app'; // Default to "my-web3-app" if no name is provided
 
 const templatesDir = path.join(__dirname, '../templates');
 const currentDir = process.cwd();
 
 async function init() {
-    console.log(`\n🚀 Welcome to Starter Kit! Creating project: ${projectName}`);
+    console.log(`\n🚀 Welcome to Starter Kit!`);
 
-    const { contractFramework, frontendFramework } = await inquirer.prompt([
+    const { projectName, contractFramework, frontendFramework } = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'projectName',
+            message: 'Enter your project name:',
+            default: 'my-web3-app',
+            validate: input => !!input.trim() || 'Project name cannot be empty.'
+        },
         {
             type: 'list',
             name: 'contractFramework',
