@@ -8,7 +8,9 @@
   },
   "scripts": {
     "chain": "yarn workspace @kit/foundry chain",
-    "codegen": "cd packages/foundry && forge build && cd ../web && npx wagmi generate"
+    "codegen": "cd packages/foundry && forge build && cd ../web && npx wagmi generate",
+    "gen": "cd packages/foundry && forge build && cd ../agent && npx wagmi generate"
+
 
   }
 }
